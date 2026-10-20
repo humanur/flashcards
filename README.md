@@ -18,7 +18,6 @@ https://humanur.github.io/flashcards/
 - Flip a card by click, tap or the Enter / Space key.
 - **Previous**, **Next** and **Shuffle** buttons; left and right arrow keys also work.
 - Card counter (for example "Kart 3 / 8").
-- Screen reader support: only the visible side is read, and the card content is announced in a live region.
 - Animation is turned off for users who prefer reduced motion.
 
 ## How it works
@@ -41,3 +40,7 @@ The counter and navigation update automatically.
 ## How to run
 
 Download the folder and open `index.html` in your browser.
+
+## AI assistance
+
+I used an AI assistant to help with the first version of the code. I reviewed it, changed the texts and learned how each part works.
