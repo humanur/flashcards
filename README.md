@@ -4,13 +4,13 @@ A small flashcard app written in plain JavaScript. The front of each card shows 
 
 ## Live demo
 
-<!-- Add your GitHub Pages link here -->
+https://humanur.github.io/flashcards/
 
 ## Screenshots
 
-<!-- Create a `screenshots/` folder, add your images and keep or edit these lines -->
-![Card front](screenshots/front.png)
-![Card back](screenshots/back.png)
+<img width="1173" height="916" alt="image" src="https://github.com/user-attachments/assets/3c1d2251-1b1c-4700-8ae3-b790eef97685" />
+<img width="1173" height="916" alt="image" src="https://github.com/user-attachments/assets/dd97a7d1-eb00-4b7a-89ae-53fdb225b8a7" />
+
 
 ## Features
 
