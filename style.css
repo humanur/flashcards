@@ -1,0 +1,120 @@
+:root {
+  --text: #1f2430;
+  --background: #ffffff;
+  --pink-light: #ffe3ea;
+  --accent: #b0285a;       /* beyaz yazıyla yaklaşık 6,4:1 kontrast */
+  --accent-dark: #8f1f49;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--background);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.site-header { padding: 1.5rem 1.25rem; text-align: center; background: var(--pink-light); }
+.site-header h1 { margin: 0 0 0.25rem; font-size: 1.75rem; }
+.site-header p { margin: 0; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.counter { margin: 0 0 1rem; font-weight: 600; }
+
+/* Kart: sabit yükseklik, 3 boyutlu çevirme için perspective */
+.card {
+  width: min(100%, 28rem);
+  height: 18rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+.card.flipped .card-inner { transform: rotateY(180deg); }
+
+.face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  border: 3px solid var(--accent);
+  border-radius: 1rem;
+  backface-visibility: hidden;
+}
+.front { background: var(--pink-light); }
+.back { background: var(--accent); color: #fff; transform: rotateY(180deg); }
+
+.emoji { font-size: 4.5rem; line-height: 1.1; }
+.name { margin-top: 0.5rem; font-size: 2rem; font-weight: 700; }
+.category { margin-top: 0.25rem; font-size: 1.1rem; }
+
+.back ul { margin: 0; padding-left: 1.25rem; text-align: left; font-size: 1.1rem; }
+.back li + li { margin-top: 0.6rem; }
+
+.hint { max-width: 28rem; margin: 1rem 0 1.5rem; text-align: center; }
+
+.controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+
+.btn {
+  font: inherit;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+.btn:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+.btn.secondary { background: #fff; color: var(--accent); }
+.btn.secondary:hover { background: var(--pink-light); }
+
+/* Sadece ekran okuyucu için, görünmez */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Hareketi azaltmak isteyen kullanıcılar için animasyonu kapat */
+@media (prefers-reduced-motion: reduce) {
+  .card-inner { transition: none; }
+}
+
+/* Geniş ekranda biraz daha büyük */
+@media (min-width: 720px) {
+  .site-header h1 { font-size: 2.25rem; }
+  .card { height: 20rem; }
+}

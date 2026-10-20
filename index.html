@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hayvan Kartları | Flashcard</title>
+  <meta name="description" content="Hayvanları ve özelliklerini öğrenmek için saf JavaScript ile yapılmış küçük bir flashcard uygulaması.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Hayvan Kartları</h1>
+    <p>Kartın önünde bir hayvan var. Çevirince özelliklerini göreceksin.</p>
+  </header>
+
+  <main>
+    <p id="counter" class="counter">Kart 1 / 8</p>
+
+    <!-- Kartın kendisi bir buton: fare, dokunmatik ve klavye ile çevrilebilir -->
+    <button id="card" class="card" type="button" aria-describedby="hint">
+      <span class="card-inner">
+        <span id="front" class="face front">
+          <span id="emoji" class="emoji" aria-hidden="true"></span>
+          <span id="name" class="name"></span>
+          <span id="category" class="category"></span>
+        </span>
+        <span id="back" class="face back">
+          <ul id="features"></ul>
+        </span>
+      </span>
+    </button>
+    <p id="hint" class="hint">Çevirmek için karta tıkla ya da Enter / Boşluk tuşuna bas. Ok tuşlarıyla kartlar arasında gezebilirsin.</p>
+
+    <div class="controls">
+      <button id="previous" class="btn secondary" type="button">Önceki</button>
+      <button id="shuffle" class="btn secondary" type="button">Karıştır</button>
+      <button id="next" class="btn" type="button">Sonraki</button>
+    </div>
+
+    <!-- Ekran okuyucu kullanıcılarına kartın içeriğini duyurur -->
+    <p id="announcement" class="visually-hidden" role="status"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
