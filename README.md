@@ -38,35 +38,6 @@ Add one object to the `animals` array in `script.js`:
 
 The counter and navigation update automatically.
 
-## Accessibility check
-
-| Tool | Result |
-|------|--------|
-| Lighthouse (Accessibility) | __ / 100 |
-
-<!-- Run Lighthouse in Chrome DevTools and fill in your real score -->
-
-Tested in: <!-- e.g. Chrome, Firefox, phone browser -->
-
-## Tech stack
-
-HTML5, CSS3 (custom properties, flexbox, 3D transforms), vanilla JavaScript. No libraries or frameworks.
-
 ## How to run
 
-1. Download or clone this folder.
-2. Open `index.html` in your browser.
-
-## Project structure
-
-```
-flashcards/
-├── index.html   # page structure
-├── style.css    # card design, flip animation, responsive rules
-├── script.js    # card data, state and event handling
-└── README.md
-```
-
-## AI assistance
-
-I used an AI assistant (Claude) to help build the first version of the code. I reviewed it and learned how each part works.
+Download the folder and open `index.html` in your browser.
